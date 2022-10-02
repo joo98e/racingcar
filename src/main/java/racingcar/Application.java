@@ -2,7 +2,6 @@ package racingcar;
 
 import utils.GlobalUtils;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Application {
@@ -15,6 +14,5 @@ public class Application {
         final String[] splitted = GlobalUtils.splitWithChar(",", initialValue);
 
 
-        Arrays.stream(splitted).map()
     }
 }

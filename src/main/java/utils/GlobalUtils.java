@@ -8,6 +8,10 @@ public class GlobalUtils {
     public static String[] splitWithChar(String criteria, String target) {
         return target.split(criteria);
     }
+
+    public static void printErrorMessage(String message) {
+        System.out.println("[ERROR] " + message);
+    }
 }
 
 
