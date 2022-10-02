@@ -1,20 +1,22 @@
 package racingcar;
 
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
+import utils.GlobalUtils;
 
 public class CarTest {
 
     @Test
-    @DisplayName("[정상 문자열] Car 생성 테스트")
-    public void generateCarInstanceByScannerString (){
+    @DisplayName("[Car] - Car 반복 생성")
+    public void generateCarInstanceByScannerString() {
         String string = "car, test, generate, instance, scanner";
 
-        final String[] split = string.split(",");
-        
-        System.out.println(Arrays.toString(split));
+        final String[] split = GlobalUtils.removeAllSpace(string).split(",");
+
+        final String[] expect = new String[]{"car", "test", "generate", "instance", "scanner"};
+        Assertions.assertArrayEquals(split, expect);
+
     }
 }
