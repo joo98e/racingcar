@@ -5,7 +5,7 @@ public class GlobalUtils {
         return str.replaceAll("\\s", "");
     }
 
-    public static String[] splitWithChar(String criteria, String target) {
+    public static String[] splitWithCriteria(String criteria, String target) {
         return target.split(criteria);
     }
 

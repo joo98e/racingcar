@@ -2,6 +2,7 @@ package racingcar;
 
 import utils.GlobalUtils;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Application {
@@ -11,8 +12,14 @@ public class Application {
 
         String initialValue = GlobalUtils.removeAllSpace(scanner.nextLine());
 
-        final String[] splitted = GlobalUtils.splitWithChar(",", initialValue);
+        final String[] splitter = GlobalUtils.splitWithCriteria(",", initialValue);
 
+        Race race = new Race();
+        race.initialize(splitter);
+        race.addCarByName("asd-fa");
+
+        final List<Car> cars = race.getCars();
+        System.out.println(cars);
 
     }
 }

@@ -27,7 +27,7 @@ public class GlobalUtilsTest {
     public void splitWithChar() {
         String target = "A,y,a,a,n,";
         String criteria = ",";
-        final String[] result = GlobalUtils.splitWithChar(criteria, target);
+        final String[] result = GlobalUtils.splitWithCriteria(criteria, target);
 
         final boolean equals = Arrays.equals(result, new String[]{"A", "y", "a", "a", "n"});
 
