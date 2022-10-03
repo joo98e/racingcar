@@ -8,9 +8,4 @@ public class Car {
         this.name = name;
     }
 
-    public static String validate(String name) {
-        return "123";
-    }
-
-
 }

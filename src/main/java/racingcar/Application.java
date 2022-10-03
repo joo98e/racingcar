@@ -2,7 +2,6 @@ package racingcar;
 
 import utils.GlobalUtils;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Application {
@@ -16,10 +15,7 @@ public class Application {
 
         Race race = new Race();
         race.initialize(splitter);
-        race.addCarByName("asd-fa");
 
-        final List<Car> cars = race.getCars();
-        System.out.println(cars);
 
     }
 }

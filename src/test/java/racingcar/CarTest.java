@@ -18,5 +18,6 @@ public class CarTest {
         final String[] expect = new String[]{"car", "test", "generate", "instance", "scanner"};
         Assertions.assertArrayEquals(split, expect);
 
+
     }
 }
