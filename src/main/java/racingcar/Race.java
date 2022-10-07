@@ -10,6 +10,10 @@ public class Race {
         this.tryCount = tryCount;
     }
 
+    public int getTryCount() {
+        return tryCount;
+    }
+
     public List<Car> getCars() {
         return this.cars;
     }
@@ -17,4 +21,5 @@ public class Race {
     public void setCars(List<Car> cars) {
         this.cars = cars;
     }
+
 }

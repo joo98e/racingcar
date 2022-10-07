@@ -30,14 +30,21 @@ class CarFactoryTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("공백으로 들어오는 생성자는 무시")
     void names() {
         // given
+        final List<String> list = Arrays.asList(" ", "1", "2", "");
 
         // when
+        final CarFactory carFactory = new CarFactory();
+        final List<Car> result = carFactory.createByNames(list);
 
+        System.out.println(result.size());
         // then
+        Assertions.assertThat(result.size()).isEqualTo(2);
+
+        Assertions.assertThat(result.get(0).getName()).isEqualTo("1");
+        Assertions.assertThat(result.get(1).getName()).isEqualTo("2");
 
     }
-
 }

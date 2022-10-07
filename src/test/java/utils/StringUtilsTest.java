@@ -27,14 +27,9 @@ class StringUtilsTest {
     @DisplayName("Split By DELEMETER(Comma)")
     void names() {
 
-        // 정상 접근
-        String string = "1,2,3,4,5";
-
-        // when
-        final List<String> byComma = StringUtils.splitByComma(string);
-
-        // then
-        Assertions.assertThat(byComma).isEqualTo(Arrays.asList("1", "2", "3", "4", "5"));
+        String example1 = "1,2,3,4,5";
+        final List<String> nonSpace = StringUtils.splitByComma(example1);
+        Assertions.assertThat(nonSpace).isEqualTo(Arrays.asList("1", "2", "3", "4", "5"));
 
     }
 }

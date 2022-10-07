@@ -7,7 +7,12 @@ public class CarFactory {
 
     public List<Car> createByNames(List<String> names) {
         List<Car> cars = new ArrayList<>();
-        names.forEach(name -> cars.add(new Car(name)));
+        names.forEach(name -> {
+            if (name.trim().equals("")) {
+                return;
+            }
+            cars.add(new Car(name));
+        });
         return cars;
     }
 
