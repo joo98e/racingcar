@@ -14,4 +14,14 @@ public class StringUtils {
     public static String removeAllSpaces(String string) {
         return string.replaceAll("\\s", "");
     }
+
+    public static StringBuilder convertTyphoonByNumber(int num) {
+        StringBuilder result;
+        result = new StringBuilder();
+        while (num != 0) {
+            result.append("-");
+            --num;
+        }
+        return result;
+    }
 }

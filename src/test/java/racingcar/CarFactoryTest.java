@@ -22,10 +22,10 @@ class CarFactoryTest {
 
         // then
         Assertions.assertThat(createdByNames.get(0).getName()).isEqualTo("car");
-        Assertions.assertThat(createdByNames.get(0).getName()).isEqualTo("bar");
-        Assertions.assertThat(createdByNames.get(0).getName()).isEqualTo("var");
-        Assertions.assertThat(createdByNames.get(0).getName()).isEqualTo("far");
-        Assertions.assertThat(createdByNames.get(0).getName()).isEqualTo("gar");
+        Assertions.assertThat(createdByNames.get(1).getName()).isEqualTo("bar");
+        Assertions.assertThat(createdByNames.get(2).getName()).isEqualTo("var");
+        Assertions.assertThat(createdByNames.get(3).getName()).isEqualTo("far");
+        Assertions.assertThat(createdByNames.get(4).getName()).isEqualTo("gar");
 
     }
 
@@ -45,6 +45,5 @@ class CarFactoryTest {
 
         Assertions.assertThat(result.get(0).getName()).isEqualTo("1");
         Assertions.assertThat(result.get(1).getName()).isEqualTo("2");
-
     }
 }

@@ -32,4 +32,17 @@ class StringUtilsTest {
         Assertions.assertThat(nonSpace).isEqualTo(Arrays.asList("1", "2", "3", "4", "5"));
 
     }
+
+    @Test
+    @DisplayName("Convert Number to Typhoon")
+    void convertTyphoonByNumber() {
+        // given
+        int targetNum = 5;
+
+        // when
+        final StringBuilder result = StringUtils.convertTyphoonByNumber(targetNum);
+
+        // then
+        Assertions.assertThat(result.toString()).isEqualTo("-----");
+    }
 }

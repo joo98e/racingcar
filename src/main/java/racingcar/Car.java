@@ -22,16 +22,16 @@ public class Car {
         return position;
     }
 
-    public int setPosition(int position) {
+    public void setPosition(int position) {
         this.position = position;
-        return this.position;
     }
 
-    public int updateStatus(int nextNum) {
-        if (nextNum >= 4) {
-            return setPosition(getPosition() + 1);
+    public void updateStatus(int nextNum) {
+        if (nextNum < 4) {
+            return;
         }
-        return setPosition(getPosition() - 1);
+
+        setPosition(getPosition() + 1);
     }
 
 }
