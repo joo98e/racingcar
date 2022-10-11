@@ -28,11 +28,9 @@ public class Race {
     }
 
     public List<Car> getWinners() {
-        List<Car> winners = new ArrayList<>(); // return type
+        List<Car> winners = new ArrayList<>();
 
-        final List<Integer> allPositionByCars = getAllPositionByCars(cars); // position value list
-        final Integer max = Collections.max(allPositionByCars); // get winner by position list
-
+        final Integer max = Collections.max(getAllPositionByCars(cars)); // get winner by position list
         cars.forEach(car -> {
             if (car.getPosition() == max) {
                 winners.add(car);
