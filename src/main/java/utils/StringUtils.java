@@ -16,11 +16,9 @@ public class StringUtils {
     }
 
     public static StringBuilder convertTyphoonByNumber(int num) {
-        StringBuilder result;
-        result = new StringBuilder();
-        while (num != 0) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < num; i++) {
             result.append("-");
-            --num;
         }
         return result;
     }

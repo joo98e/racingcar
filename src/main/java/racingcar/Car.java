@@ -1,6 +1,7 @@
 package racingcar;
 
-import Excemtion.CarException;
+import exception.carExceptionHandler.CarException;
+import utils.RandomUtils;
 
 public class Car {
     private final String name;
@@ -10,8 +11,14 @@ public class Car {
         if (name.length() > 5) {
             throw new CarException("이름은 5자 이하이어야 합니다.");
         }
-
         this.name = name;
+    }
+
+    public void randomMove() {
+        if (RandomUtils.nextInt(0, 9) < 4) {
+            return;
+        }
+        setPosition(getPosition() + 1);
     }
 
     public String getName() {
@@ -24,14 +31,6 @@ public class Car {
 
     public void setPosition(int position) {
         this.position = position;
-    }
-
-    public void updateStatus(int nextNum) {
-        if (nextNum < 4) {
-            return;
-        }
-
-        setPosition(getPosition() + 1);
     }
 
 }
